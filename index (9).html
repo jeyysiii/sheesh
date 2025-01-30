@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <body id="html-body" onload="changeBackground()">
+        <!--
+        
+        CS3 | Module 9.2
+        Event Handlers
+
+        Objectives
+          - To explain the concept of events and triggers
+          - To create necessary code to capture events 
+            and handle events
+
+
+        Created by Kyle Enorio.
+        January 28, 2025.
+
+        For use only within PSHS-SRC. Sharing of this code to 
+          outside entities is strictly prohibited.
+
+        Note that while multiple script elements exist, it is 
+          only intended for demonstration. It is always good
+          practice to place all JavaScript code into one
+          script element, or multiple script files if external.
+        
+        -->
+
+        <!-- onclick events -->
+        <button onclick="respondToClick()">Click me!</button>
+        <br><br>
+        <button onclick="divide(5,15)"></button>
+
+        <br><br>
+
+        <img id="changing-image" src="https://cdn.britannica.com/34/235834-050-C5843610/two-different-breeds-of-cats-side-by-side-outdoors-in-the-garden.jpg" height="200px" />
+        <br><br>
+        <button onclick="changeImage()">Click me to change the image!</button>
+
+        <script>
+            function respondToClick() {
+                alert('You touched me!');
+            }
+
+            function divide(a, b) {
+                alert(a / b);
+            }
+
+            function changeImage() {
+                document.getElementById('changing-image').src = 'https://hips.hearstapps.com/hmg-prod/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg'
+            }
+        </script>
+
+        <!-- onload events -->
+        <script>
+            function changeBackground() {
+                let r = Math.random() * 255;
+                let g = Math.random() * 255;
+                let b = Math.random() * 255;
+
+                var color = 'rgb(' + r + ',' + b + ',' + g + ')';
+
+                document.getElementById('html-body').style.backgroundColor = color;
+            }
+        </script>
+
+        <!-- Practice exercise -->
+        <p id="practice-output"></p>
+        <script>
+            // Insert code here...
+        </script>
+    </body>
+</html>
